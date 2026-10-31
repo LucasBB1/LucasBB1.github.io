@@ -253,6 +253,25 @@ figcaption {
   color: var(--accent);
 }
 
+/* ---------- Texto justificado ---------- */
+main.wrap p,
+main.wrap li,
+.post-list .excerpt {
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+main.wrap p.subtitle,
+main.wrap p.contact-line,
+main.wrap p.tags,
+main.wrap p.post-meta,
+main.wrap p.exp-meta,
+main.wrap p.cite {
+  text-align: left;
+  hyphens: manual;
+  -webkit-hyphens: manual;
+}
+
 /* ---------- Pie ---------- */
 footer.site {
   border-top: 1px solid var(--border);
