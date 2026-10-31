@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Investigación — Lucas Bottinelli Baltra</title>
-  <meta name="description" content="Proyectos de investigación de Lucas Bottinelli Baltra en comportamiento electoral y opinión pública.">
+  <meta name="description" content="Proyectos de investigación de Lucas Bottinelli Baltra en comportamiento electoral y opinión pública, incluido el documento de trabajo La Reina hacia 2028.">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,13 +22,33 @@
       <a class="navlink" href="blog.html">Blog</a>
       <a class="navlink" href="cv.html">CV</a>
       <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema" title="Cambiar tema">◐</button>
-
     </nav>
   </header>
 
   <main class="wrap">
     <h1>Investigación</h1>
     <p class="subtitle">Líneas de trabajo y proyectos en curso</p>
+
+    <h2>La Reina hacia 2028: realineamiento, voto cruzado y escenarios municipales</h2>
+    <p class="exp-meta">Documento de trabajo N.° 1 · Noviembre de 2026</p>
+    <p>
+      Análisis de los resultados electorales de La Reina entre 2016 y 2025 y escenarios para
+      la elección municipal de 2028, la primera sin el alcalde en ejercicio en la papeleta
+      desde 2016. Usa los archivos oficiales del Servicio Electoral (SERVEL) a nivel de mesa
+      para 29 papeletas y combina un motor de asignación <strong>D'Hondt</strong> validado con
+      los 24 concejales electos entre 2016 y 2024, un modelo bayesiano de <strong>inferencia
+      ecológica R×C</strong> del voto cruzado entre alcalde y concejales, una
+      <strong>simulación Monte Carlo</strong> de 108 arquitecturas de listas y la
+      georreferenciación de los locales de votación con el Censo 2024. Desarrollado
+      íntegramente en R, con datos y código abiertos.
+    </p>
+    <div class="doc-links">
+      <a href="posts/la-reina-2028.html">Resumen</a>
+      <a href="documentos/Bottinelli-Baltra_2026_La-Reina-2028.pdf">Documento (PDF)</a>
+      <a href="mapas/la-reina-2024.html">Mapa interactivo</a>
+      <a href="https://github.com/LucasBB1/Analisis-Electoral-La-Reina-2016-2028">Datos y código</a>
+    </div>
+
 
     <h2>Condicionantes de la satisfacción con la democracia en Chile</h2>
     <p>
@@ -37,25 +58,6 @@
       socioeconómica, territorial y generacional de las personas se asocia con su
       evaluación del régimen, y cómo han evolucionado esas brechas en el tiempo.
       Desarrollado en el marco del Magíster en Ciencia Política UC.
-    </p>
-
-    <h2>Comportamiento electoral a nivel de mesa en una comuna del Gran Santiago</h2>
-    <p>
-      Proyecto propio de análisis del comportamiento electoral municipal a nivel de
-      mesa, construido sobre una base de datos de elaboración propia que reconstruye
-      los resultados oficiales del Servicio Electoral (SERVEL) para tres ciclos
-      electorales, con verificación aritmética contra los totales de cada elección.
-      El trabajo cubre 231 mesas distribuidas en 17 locales de votación,
-      georreferenciadas por sector socioespacial.
-    </p>
-    <p>
-      En lo metodológico combina tres herramientas: una <strong>simulación del sistema
-      D'Hondt</strong> para la asignación de escaños, certificada contra los resultados
-      reales; técnicas de <strong>inferencia ecológica</strong> para estimar patrones de
-      voto cruzado a partir de datos agregados por mesa; y un <strong>modelo de simulación
-      Monte Carlo</strong> que expresa los resultados como distribución de probabilidad
-      bajo incertidumbre, en lugar de una proyección puntual. Desarrollado íntegramente
-      en R, con énfasis en la reproducibilidad y la trazabilidad de las fuentes.
     </p>
 
     <h2>Composición del Congreso chileno (2010–presente)</h2>
@@ -73,7 +75,7 @@
   <script>
     (function () {
       var root = document.documentElement;
-      var saved = localStorage.getItem('theme');
+      var saved = null; try { saved = localStorage.getItem('theme'); } catch (e) {}
       if (saved) root.setAttribute('data-theme', saved);
       function current() {
         if (root.getAttribute('data-theme')) return root.getAttribute('data-theme');
@@ -85,7 +87,7 @@
         btn.addEventListener('click', function () {
           var next = current() === 'dark' ? 'light' : 'dark';
           root.setAttribute('data-theme', next);
-          localStorage.setItem('theme', next);
+          try { localStorage.setItem('theme', next); } catch (e) {}
         });
       });
     })();

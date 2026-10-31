@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Experiencia — Lucas Bottinelli Baltra</title>
   <meta name="description" content="Trayectoria profesional de Lucas Bottinelli Baltra en la gestión pública: División de Coordinación Interministerial del Ministerio del Interior y SEGPRES.">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +22,6 @@
       <a class="navlink" href="blog.html">Blog</a>
       <a class="navlink" href="cv.html">CV</a>
       <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema" title="Cambiar tema">◐</button>
-
     </nav>
   </header>
 
@@ -33,13 +33,13 @@
       Mi paso por el sector público combinó el análisis técnico con la coordinación
       política de la acción de gobierno. Trabajé en el corazón del seguimiento de la
       agenda presidencial —primero en la Secretaría General de la Presidencia y luego
-      en el Ministerio del Interior y Seguridad Pública—, donde la tarea era traducir
+      en el Ministerio del Interior—, donde la tarea era traducir
       las prioridades del Ejecutivo en compromisos verificables y hacer que efectivamente
       avanzaran, articulando a ministerios, servicios y autoridades regionales.
     </p>
 
     <h2>Asesor — División de Coordinación Interministerial (DCI)</h2>
-    <p class="exp-meta">Ministerio del Interior y Seguridad Pública · Nov. 2025 – Mar. 2026</p>
+    <p class="exp-meta">Ministerio del Interior · Nov. 2025 – Mar. 2026</p>
 
     <p>
       La División de Coordinación Interministerial es la unidad encargada de coordinar
@@ -111,7 +111,7 @@
   <script>
     (function () {
       var root = document.documentElement;
-      var saved = localStorage.getItem('theme');
+      var saved = null; try { saved = localStorage.getItem('theme'); } catch (e) {}
       if (saved) root.setAttribute('data-theme', saved);
       function current() {
         if (root.getAttribute('data-theme')) return root.getAttribute('data-theme');
@@ -123,7 +123,7 @@
         btn.addEventListener('click', function () {
           var next = current() === 'dark' ? 'light' : 'dark';
           root.setAttribute('data-theme', next);
-          localStorage.setItem('theme', next);
+          try { localStorage.setItem('theme', next); } catch (e) {}
         });
       });
     })();

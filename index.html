@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lucas Bottinelli Baltra</title>
-  <meta name="description" content="Lucas Bottinelli Baltra — cientista político. Magíster en Ciencia Política, Pontificia Universidad Católica de Chile.">
+  <meta name="description" content="Lucas Bottinelli Baltra — cientista político y candidato a Magíster en Ciencia Política, Pontificia Universidad Católica de Chile.">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +22,6 @@
       <a class="navlink" href="blog.html">Blog</a>
       <a class="navlink" href="cv.html">CV</a>
       <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema" title="Cambiar tema">◐</button>
-
     </nav>
   </header>
 
@@ -49,8 +49,8 @@
       Mi trabajo combina el análisis cuantitativo de datos políticos con la experiencia
       en la gestión pública. Me desempeñé como asesor en la División de Coordinación
       Interministerial del Ministerio del Interior, donde realicé el seguimiento de más
-      de 330 compromisos presidenciales de los Ministerios de Hacienda; y de las Culturas,
-      junto a los compromisos regionales y proyectos de inversión del Maule y Ñuble,
+      de 330 compromisos presidenciales de los Ministerios de Hacienda y de las Culturas,
+      las Artes y el Patrimonio, junto a los compromisos regionales y proyectos de inversión del Maule y Ñuble,
       coordinando su monitoreo territorial y la articulación con autoridades regionales.
       Antes realicé mi práctica en la Secretaría General de la Presidencia (SEGPRES).
     </p>
@@ -79,7 +79,7 @@
   <script>
     (function () {
       var root = document.documentElement;
-      var saved = localStorage.getItem('theme');
+      var saved = null; try { saved = localStorage.getItem('theme'); } catch (e) {}
       if (saved) root.setAttribute('data-theme', saved);
       function current() {
         if (root.getAttribute('data-theme')) return root.getAttribute('data-theme');
@@ -91,7 +91,7 @@
         btn.addEventListener('click', function () {
           var next = current() === 'dark' ? 'light' : 'dark';
           root.setAttribute('data-theme', next);
-          localStorage.setItem('theme', next);
+          try { localStorage.setItem('theme', next); } catch (e) {}
         });
       });
     })();
