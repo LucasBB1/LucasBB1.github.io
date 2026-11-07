@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Investigación — Lucas Bottinelli Baltra</title>
-  <meta name="description" content="Proyectos de investigación de Lucas Bottinelli Baltra en comportamiento electoral y opinión pública, incluido el documento de trabajo La Reina hacia 2028.">
+  <meta name="description" content="Agenda de investigación y documentos de trabajo de Lucas Bottinelli Baltra sobre instituciones, partidos y representación política en Chile.">
   <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,20 +27,47 @@
 
   <main class="wrap">
     <h1>Investigación</h1>
-    <p class="subtitle">Líneas de trabajo y proyectos en curso</p>
+    <p class="subtitle">Agenda, documentos de trabajo y proyectos en curso</p>
 
-    <h2>¿Quién se va y qué cambia? Salidas de partido en la derecha chilena y el voto en la Cámara de Diputadas y Diputados, 2014–2026</h2>
-    <p class="exp-meta">Documento de trabajo N.° 5 · Noviembre de 2026</p>
+    <h2>Agenda de investigación</h2>
     <p>
-      Análisis de quiénes dejan los partidos de la derecha convencional para sumarse a la derecha
-      radical y de qué cambia en su voto. Reconstruye el <strong>universo de salidas</strong> de
-      partidos de derecha durante el mandato entre 2014 y 2026, con fecha de anuncio, destino,
-      motivo declarado y fuente, y estima la posición de cada diputado en cada trimestre con un
-      <strong>modelo de puntos ideales dinámico</strong> sobre 864.324 votos nominales. Combina un
-      modelo de riesgo, un <strong>estudio de eventos</strong> con grupo de control y pruebas de
-      proceso caso a caso, y extiende el análisis al Senado. Desarrollado íntegramente en R, con
-      datos y código abiertos.
+      Mi investigación estudia cómo las reglas institucionales y las decisiones de los actores
+      políticos transforman la representación política en Chile. Abordo ese problema en distintas
+      escalas. En el nivel municipal, examino la competencia electoral, la coordinación de las
+      listas y los efectos del límite de reelección de alcaldes. En el sistema de partidos, evalúo
+      las reglas que regulan la entrada y la permanencia de las colectividades y la conversión de
+      votos en escaños. En el Congreso, analizo la fragmentación parlamentaria y el comportamiento
+      legislativo de quienes abandonan sus partidos.
     </p>
+    <p>
+      La pregunta que conecta estos proyectos es cómo las instituciones, los partidos y los actores
+      políticos están cambiando la representación democrática en Chile. Trabajo con datos
+      electorales y legislativos oficiales y con diseños cuantitativos, y cada documento publica
+      sus datos y su código para que los resultados puedan reproducirse.
+    </p>
+
+    <h2>Documentos de trabajo</h2>
+    <p class="status-note">
+      Los documentos de trabajo son versiones preliminares de publicación independiente, con
+      identificador DOI en Zenodo. No han sido sometidos a evaluación por pares, y sus resultados
+      pueden cambiar en versiones posteriores. Los comentarios son bienvenidos en
+      <a href="mailto:lucasbottinelli4@gmail.com">lucasbottinelli4@gmail.com</a>.
+    </p>
+
+    <h3>¿Quién se va y qué cambia? Salidas de partido en la derecha chilena y el voto en la Cámara de Diputadas y Diputados, 2014–2026</h3>
+    <p class="exp-meta">Documento de trabajo N.° 5 · Noviembre de 2026</p>
+    <dl class="doc-summary">
+      <dt>Pregunta</dt>
+      <dd>¿Quiénes dejan los partidos de la derecha convencional para sumarse a la derecha radical, y qué cambia en su voto?</dd>
+      <dt>Datos</dt>
+      <dd>Universo de 26 renuncias de diputados a partidos de derecha entre 2014 y 2026, con fecha de anuncio, destino, motivo declarado y fuente, y 864.324 votos nominales en proyectos de ley. El análisis se extiende al Senado.</dd>
+      <dt>Método</dt>
+      <dd>Modelo de puntos ideales dinámico por trimestre, modelo de riesgo de salida, estudio de eventos con grupo de control y pruebas de proceso caso a caso.</dd>
+      <dt>Hallazgo principal</dt>
+      <dd>Quienes se van hacia la derecha radical ya votaban más a la derecha que la mediana de su partido, con un percentil medio de 0,78 o 0,69 según la especificación. Su voto se aleja del partido de origen después de la salida, no antes.</dd>
+      <dt>Limitación principal</dt>
+      <dd>Doce salidas hacia la derecha radical permiten pruebas sencillas, pero no estimar con precisión varios efectos a la vez. El modelo de posición supone una sola dimensión, lo que el análisis por área temática aborda solo en parte.</dd>
+    </dl>
     <div class="doc-links">
       <a href="posts/cambio-partido-derecha.html">Resumen</a>
       <a href="documentos/Bottinelli-Baltra_2026_Cambio-partido-derecha.pdf">Documento (PDF)</a>
@@ -48,18 +75,20 @@
       <a href="https://doi.org/10.5281/zenodo.24026531">DOI</a>
     </div>
 
-    <h2>Más allá de la regla: fragmentación electoral y parlamentaria en Chile tras el fin del sistema binominal, 2009–2026</h2>
+    <h3>Más allá de la regla: fragmentación electoral y parlamentaria en Chile tras el fin del sistema binominal, 2009–2026</h3>
     <p class="exp-meta">Documento de trabajo N.° 4 · Noviembre de 2026</p>
-    <p>
-      Análisis de cuánto del aumento de la fragmentación del Congreso chileno se debe a la reforma
-      electoral de 2015 y cuánto a la fragmentación del voto, y de los cambios de militancia
-      durante la legislatura. Con los resultados por candidato del Servicio Electoral (SERVEL) de
-      2009 a 2025, aplica cada regla a los votos de la otra época en un
-      <strong>contrafactual validado</strong> con los 670 diputados electos, separa los
-      componentes de la reforma y reconstruye la <strong>militancia de diputados y
-      senadores</strong> con los registros de la Cámara y las reseñas de la Biblioteca del Congreso
-      Nacional. Desarrollado íntegramente en R, con datos y código abiertos.
-    </p>
+    <dl class="doc-summary">
+      <dt>Pregunta</dt>
+      <dd>¿Cuánto del aumento de la fragmentación del Congreso chileno se debe a la reforma electoral de 2015 y cuánto a la fragmentación del voto, y continúa la fragmentación durante la legislatura?</dd>
+      <dt>Datos</dt>
+      <dd>Resultados por candidato del Servicio Electoral (SERVEL) de 2009 a 2025, registro de militancias de la Cámara y militancia de los senadores reconstruida con las reseñas de la Biblioteca del Congreso Nacional.</dd>
+      <dt>Método</dt>
+      <dd>Contrafactual que aplica cada regla a los votos de la otra época, validado con los 670 diputados electos del período, y descomposición de los componentes de la reforma.</dd>
+      <dt>Hallazgo principal</dt>
+      <dd>Con los votos de 2017 y 2021, el binominal habría reducido el número efectivo de partidos en escaños en 1,7 y 3,2 puntos, de modo que el efecto de la regla depende de la fragmentación del voto, que se duplicó entre 2009 y 2021. La proporción de diputados que cambió de militancia durante su período pasó de 3% a 26%.</dd>
+      <dt>Limitación principal</dt>
+      <dd>El contrafactual mantiene fijos los votos, por lo que mide el efecto mecánico de la regla y no su efecto total, que incluye las respuestas estratégicas de partidos, candidatos y electores.</dd>
+    </dl>
     <div class="doc-links">
       <a href="posts/fragmentacion-congreso.html">Resumen</a>
       <a href="documentos/Bottinelli-Baltra_2026_Fragmentacion-Congreso.pdf">Documento (PDF)</a>
@@ -67,20 +96,20 @@
       <a href="https://doi.org/10.5281/zenodo.23924456">DOI</a>
     </div>
 
-    <h2>Entrar y permanecer: el doble umbral de afiliación de la reforma al sistema político y la oferta partidaria de 2028</h2>
+    <h3>Entrar y permanecer: el doble umbral de afiliación de la reforma al sistema político y la oferta partidaria de 2028</h3>
     <p class="exp-meta">Documento de trabajo N.° 3 · Versión 2.0 · Noviembre de 2026</p>
-    <p>
-      Evaluación ex ante de los requisitos de afiliación de la reforma al sistema político
-      (Boletín N.° 17.640-06), que exige el 0,3% del padrón para constituir un partido en una
-      región y la mitad de esa cifra para mantenerlo. Con los afiliados por partido y región
-      publicados por el Servicio Electoral (SERVEL), el padrón definitivo de 2025 y los
-      resultados de 2024, mide el <strong>cumplimiento territorial</strong> de los quince
-      partidos constituidos, la <strong>exposición</strong> de su votación y el efecto de su
-      eventual exclusión con una <strong>simulación D'Hondt</strong> validada con los electos de
-      2024. Cuatro partidos no reúnen hoy ocho regiones, y la reforma también retira de algunas
-      regiones a partidos medianos y grandes. Desarrollado íntegramente en R, con datos y código
-      abiertos.
-    </p>
+    <dl class="doc-summary">
+      <dt>Pregunta</dt>
+      <dd>¿Cómo reconfiguran los requisitos de afiliación de la reforma al sistema político (Boletín N.° 17.640-06) la oferta partidaria de cara a 2028?</dd>
+      <dt>Datos</dt>
+      <dd>Afiliados por partido y región al 30 de septiembre de 2026 publicados por el SERVEL, padrón definitivo de 2025 y resultados electorales de 2024.</dd>
+      <dt>Método</dt>
+      <dd>Cumplimiento territorial de los quince partidos constituidos, exposición de su votación y simulación D'Hondt de su eventual exclusión, validada con los electos de 2024.</dd>
+      <dt>Hallazgo principal</dt>
+      <dd>El nuevo denominador eleva el umbral efectivo en 70,2%. Cuatro partidos no reúnen ocho regiones sobre el umbral de mantención, y la reforma también retira de algunas regiones a partidos medianos y grandes.</dd>
+      <dt>Limitación principal</dt>
+      <dd>Es una evaluación ex ante. Describe la situación a septiembre de 2026 y no un pronóstico para 2028, y depende del texto que resulte del control del Tribunal Constitucional.</dd>
+    </dl>
     <div class="doc-links">
       <a href="posts/reforma-sistema-politico.html">Resumen</a>
       <a href="documentos/Bottinelli-Baltra_2026_Reforma-sistema-politico.pdf">Documento (PDF)</a>
@@ -88,19 +117,20 @@
       <a href="https://doi.org/10.5281/zenodo.24030166">DOI</a>
     </div>
 
-    <h2>Fin del atrincheramiento: el límite de reelección y la competencia municipal en Chile, 2012–2024</h2>
+    <h3>Fin del atrincheramiento: el límite de reelección y la competencia municipal en Chile, 2012–2024</h3>
     <p class="exp-meta">Documento de trabajo N.° 2 · Noviembre de 2026</p>
-    <p>
-      Evaluación del límite de reelección de alcaldes establecido por la Ley N.° 21.238, que dejó
-      fuera de la papeleta a 96 alcaldes en 2021 y a 69 en 2024. Con los resultados oficiales del
-      Servicio Electoral (SERVEL) para las 345 comunas entre 2012 y 2024 y los reemplazos de
-      alcaldes documentados caso a caso, estima la ventaja del incumbente con una
-      <strong>regresión discontinua</strong> en elecciones estrechas y el efecto del límite con
-      <strong>diferencias en diferencias apiladas</strong> por ola de aplicación. El límite sumó
-      alrededor de 1,5 candidatos por comuna, más que una salida voluntaria, sin reducir la
-      continuidad del sector saliente más que esta. Desarrollado íntegramente en R, con datos y
-      código abiertos.
-    </p>
+    <dl class="doc-summary">
+      <dt>Pregunta</dt>
+      <dd>¿Qué cambia en una elección municipal cuando el alcalde sale por el límite legal de reelección (Ley N.° 21.238) y no por decisión propia?</dd>
+      <dt>Datos</dt>
+      <dd>Resultados oficiales del SERVEL para las 345 comunas entre 2012 y 2024 y reemplazos de alcaldes documentados caso a caso.</dd>
+      <dt>Método</dt>
+      <dd>Regresión discontinua en elecciones estrechas para la ventaja del incumbente y diferencias en diferencias apiladas por ola de aplicación del límite.</dd>
+      <dt>Hallazgo principal</dt>
+      <dd>El límite sumó alrededor de 1,5 candidatos por comuna, más que una salida voluntaria, sin que la familia política saliente retuviera menos la alcaldía.</dd>
+      <dt>Limitación principal</dt>
+      <dd>Los reemplazos de alcaldes se reconstruyeron con prensa y podrían estar incompletos, y el estudio mide la cantidad de candidatos, no su calidad.</dd>
+    </dl>
     <div class="doc-links">
       <a href="posts/limite-reeleccion-alcaldes.html">Resumen</a>
       <a href="documentos/Bottinelli-Baltra_2026_Limite-reeleccion-alcaldes.pdf">Documento (PDF)</a>
@@ -108,19 +138,20 @@
       <a href="https://doi.org/10.5281/zenodo.23877074">DOI</a>
     </div>
 
-    <h2>La Reina hacia 2028: realineamiento, voto cruzado y escenarios municipales</h2>
+    <h3>La Reina hacia 2028: realineamiento, voto cruzado y escenarios municipales</h3>
     <p class="exp-meta">Documento de trabajo N.° 1 · Noviembre de 2026</p>
-    <p>
-      Análisis de los resultados electorales de La Reina entre 2016 y 2025 y escenarios para
-      la elección municipal de 2028, la primera sin el alcalde en ejercicio en la papeleta
-      desde 2016. Usa los archivos oficiales del Servicio Electoral (SERVEL) a nivel de mesa
-      para 29 papeletas y combina un motor de asignación <strong>D'Hondt</strong> validado con
-      los 24 concejales electos entre 2016 y 2024, un modelo bayesiano de <strong>inferencia
-      ecológica R×C</strong> del voto cruzado entre alcalde y concejales, una
-      <strong>simulación Monte Carlo</strong> de 108 arquitecturas de listas y la
-      georreferenciación de los locales de votación con el Censo 2024. Desarrollado
-      íntegramente en R, con datos y código abiertos.
-    </p>
+    <dl class="doc-summary">
+      <dt>Pregunta</dt>
+      <dd>¿Cómo se transformó el electorado de La Reina entre 2016 y 2025, y qué condiciones pesan más en su elección municipal de 2028?</dd>
+      <dt>Datos</dt>
+      <dd>Archivos oficiales del SERVEL a nivel de mesa para 29 papeletas y georreferenciación de los locales de votación con el Censo 2024.</dd>
+      <dt>Método</dt>
+      <dd>Motor de asignación D'Hondt validado con los 24 concejales electos entre 2016 y 2024, inferencia ecológica R×C bayesiana del voto cruzado y simulación Monte Carlo de 108 arquitecturas de listas.</dd>
+      <dt>Hallazgo principal</dt>
+      <dd>Un realineamiento dentro de la derecha, un voto de alcalde en 2024 que no fue voto de coalición y un concejo 2028 cuyo resultado depende, más que de cualquier otra variable, de la coordinación de las listas de centro e izquierda.</dd>
+      <dt>Limitación principal</dt>
+      <dd>Es un caso único, y la inferencia ecológica estima comportamientos individuales con datos agregados por mesa. Las proyecciones son escenarios con supuestos explícitos, no pronósticos.</dd>
+    </dl>
     <div class="doc-links">
       <a href="posts/la-reina-2028.html">Resumen</a>
       <a href="documentos/Bottinelli-Baltra_2026_La-Reina-2028.pdf">Documento (PDF)</a>
@@ -129,15 +160,16 @@
       <a href="https://doi.org/10.5281/zenodo.23841814">DOI</a>
     </div>
 
+    <h2>Proyectos en curso</h2>
 
-    <h2>Condicionantes de la satisfacción con la democracia en Chile</h2>
+    <h3>Condicionantes de la satisfacción con la democracia en Chile</h3>
+    <p class="exp-meta">Proyecto en curso · Magíster en Ciencia Política UC</p>
     <p>
       Proyecto de análisis cuantitativo sobre los determinantes individuales de la
       satisfacción con el funcionamiento de la democracia en Chile. A partir de datos
       de encuesta (AmericasBarometer / LAPOP), examina cómo la posición electoral,
       socioeconómica, territorial y generacional de las personas se asocia con su
       evaluación del régimen, y cómo han evolucionado esas brechas en el tiempo.
-      Desarrollado en el marco del Magíster en Ciencia Política UC.
     </p>
 
   </main>

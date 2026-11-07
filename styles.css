@@ -253,6 +253,29 @@ figcaption {
   color: var(--accent);
 }
 
+/* ---------- Resúmenes estructurados ---------- */
+.doc-summary {
+  display: grid;
+  grid-template-columns: 9.5rem 1fr;
+  gap: 0.45rem 1rem;
+  margin: 0 0 1.1rem;
+  font-size: 0.95rem;
+}
+.doc-summary dt {
+  font-weight: 600;
+  color: var(--accent);
+}
+.doc-summary dd { margin: 0; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.doc-summary dd.plain { text-align: left; hyphens: manual; -webkit-hyphens: manual; }
+.status-note {
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  padding: 0.7rem 1rem;
+  font-size: 0.95rem;
+  border-radius: 0 4px 4px 0;
+}
+main.wrap h3 { font-size: 1.2rem; line-height: 1.3; margin-top: 2.2rem; }
+
 /* ---------- Texto justificado ---------- */
 main.wrap p,
 main.wrap li,
@@ -288,4 +311,6 @@ footer.site {
   body { font-size: 17px; }
   h1 { font-size: 1.7rem; }
   nav { gap: 0.3rem 1rem; }
+  .doc-summary { grid-template-columns: 1fr; gap: 0.1rem; }
+  .doc-summary dd { margin-bottom: 0.5rem; }
 }
