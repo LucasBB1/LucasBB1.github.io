@@ -356,7 +356,7 @@ nav .nav-links a.navlink { font-size: 0.98rem; }
   display: block;
 }
 ul.scope { padding-left: 1.2rem; }
-ul.scope li { margin-bottom: 0.6rem; text-align: left; hyphens: manual; }
+ul.scope li { margin-bottom: 0.6rem; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 ul.scope.muted li { color: var(--muted); }
 @media (max-width: 640px) {
   .brief { grid-template-columns: 1fr; }
