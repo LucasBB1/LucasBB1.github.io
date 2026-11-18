@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>¿Qué explica la satisfacción con la democracia en Chile? — Lucas Bottinelli Baltra</title>
-  <meta name="description" content="Planteamiento teórico y construcción de conceptos para un estudio sobre la satisfacción con la democracia en Chile.">
+  <title>Ganadores y perdedores: las bases de la insatisfacción democrática en Chile, 2006–2026 — Lucas Bottinelli Baltra</title>
+  <meta name="description" content="Quiénes están más y menos satisfechos con la democracia en Chile y cómo cambió eso entre 2006 y 2026, con nueve olas de LAPOP. Trabajo grupal del curso ICP5006.">
   <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
   <link rel="alternate" hreflang="es" href="https://lucasbb1.github.io/posts/satisfaccion-democracia.html">
   <link rel="alternate" hreflang="en" href="https://lucasbb1.github.io/en/posts/satisfaccion-democracia.html">
@@ -33,20 +33,114 @@
 
   <main class="wrap">
     <article class="post">
-      <h1>¿Qué explica la satisfacción con la democracia en Chile?</h1>
-      <p class="post-meta">Borrador · Curso Medición y Análisis Dimensional de Datos Políticos (ICP5006)</p>
+      <h1>Ganadores y perdedores: las bases de la insatisfacción democrática en Chile, 2006–2026</h1>
+      <p class="post-meta">Lucas Bottinelli Baltra, Matías Llorens Rubio y Benjamín Zúñiga Silva · Magíster en Ciencia Política, Pontificia Universidad Católica de Chile<br>Trabajo grupal del curso Medición y Análisis Dimensional de Datos Políticos (ICP5006), profesora Soledad Araya · Entrega 2, resultados preliminares · Noviembre de 2026</p>
+
+      <div class="doc-links">
+        <a href="https://github.com/LucasBB1/Ganadores-y-Perdedores">Código y resultados (GitHub)</a>
+      </div>
 
       <p>
-        Esta entrada contendrá el informe del proyecto sobre las condicionantes
-        estructurales de la satisfacción con la democracia en Chile. El contenido
-        definitivo —marco teórico, operacionalización de conceptos, análisis de datos
-        y resultados— se publicará aquí como parte de la segunda entrega del curso.
+        Entre 2006 y 2026, la proporción de chilenos satisfechos con el funcionamiento de la democracia
+        no cayó de manera lineal. Osciló entre 49% y 63% hasta 2014, se desplomó a 32% en 2017, antes
+        del estallido social, y subió a 55% en 2026. Este trabajo pregunta qué grupos están más y menos
+        satisfechos y si esas diferencias cambiaron en el tiempo. Evalúa cuatro condicionantes
+        propuestas por la literatura, que son haber votado por el ganador o el perdedor de la elección
+        presidencial, la posición socioeconómica, la edad y el acceso a la ciudadanía en el territorio.
+      </p>
+      <p>
+        Esta entrada resume los resultados de la segunda entrega del curso. El informe completo se
+        publicará aquí después de la entrega final.
       </p>
 
+      <h2>Datos y métodos</h2>
       <p>
-        <em>Marcador de posición. Reemplazar con el contenido reproducible generado
-        desde R Markdown / Quarto.</em>
+        El análisis usa las diez olas del Barómetro de las Américas (LAPOP) para Chile entre 2006 y
+        2026. La variable dependiente es el ítem PN4, que pregunta por la satisfacción con la forma en
+        que la democracia funciona en Chile, recodificado como satisfecho o muy satisfecho frente al
+        resto. Los modelos son regresiones logísticas con efectos fijos de ola y el diseño muestral de
+        cada encuesta, estimadas sobre las nueve olas presenciales. La ola telefónica de 2021 solo se
+        usa en la serie nacional. Todo el análisis es reproducible en R desde el repositorio.
       </p>
+      <figure>
+        <img src="../img/satisfaccion-democracia/g1-tendencia-nacional.png" alt="Gráfico de líneas con el porcentaje de satisfechos con la democracia en Chile en cada ola de LAPOP entre 2006 y 2026, con franjas por gobierno" loading="lazy">
+        <figcaption>Porcentaje satisfecho o muy satisfecho con la democracia en Chile, 2006–2026. Elaboración propia con datos de LAPOP. These data were supplied by LAPOP Lab at Vanderbilt University, which takes no responsibility for any interpretation of the data.</figcaption>
+      </figure>
+
+      <h2>Cuatro resultados</h2>
+
+      <h3>1. Haber votado por el ganador es la condicionante más fuerte</h3>
+      <p>
+        Quienes votaron por el presidente en ejercicio tienen odds de estar satisfechos 1,9 veces
+        mayores que quienes votaron por otro candidato. En probabilidades, la diferencia es de 15,7
+        puntos porcentuales, casi el doble que cualquier otra condicionante. La brecha es positiva en
+        todas las olas con dato de voto y no crece en el tiempo.
+      </p>
+      <div class="table-scroll">
+          <table>
+            <thead><tr><th>Comparación</th><th>Grupo</th><th>Referencia</th><th>Diferencia (puntos)</th></tr></thead>
+          <tbody>
+            <tr><td>Ganador vs. perdedor (2006–2023)</td><td>58,9</td><td>43,2</td><td>15,7</td></tr>
+            <tr><td>Rural vs. urbana</td><td>57,3</td><td>48,7</td><td>8,6</td></tr>
+            <tr><td>60 o más vs. 18–29</td><td>54,5</td><td>48,3</td><td>6,2</td></tr>
+            <tr><td>Ingreso alto vs. bajo</td><td>52,5</td><td>47,1</td><td>5,4</td></tr>
+            <tr><td>Región Metropolitana vs. otras regiones</td><td>46,7</td><td>51,9</td><td>−5,2</td></tr>
+            <tr><td>Superior vs. básica o menos</td><td>50,3</td><td>50,5</td><td>−0,2</td></tr>
+            <tr><td>Mujer vs. hombre</td><td>49,5</td><td>50,1</td><td>−0,6</td></tr>
+          </tbody>
+          </table>
+        </div>
+      <p class="note">Probabilidad predicha de estar satisfecho o muy satisfecho (%), manteniendo las demás características observadas de los entrevistados. Para el voto, olas 2006–2023, porque la ola 2026 no preguntó por el voto.</p>
+
+      <h3>2. Lo socioeconómico empieza a pesar después de 2019</h3>
+      <p>
+        Hasta 2019, la educación no diferenciaba la satisfacción y el ingreso lo hacía poco. En
+        2023–2026, las personas con educación media o superior y las de mayor ingreso pasan a estar
+        claramente más satisfechas. Un test de Wald confirma que ambos efectos cambian entre períodos.
+      </p>
+
+      <h3>3. La ventaja de las personas mayores se invierte</h3>
+      <p>
+        Hasta 2019, las personas de 60 años o más eran las más satisfechas. En 2023–2026 son las más
+        jóvenes las que están más satisfechas. Un cambio tan rápido es difícil de explicar por la
+        socialización temprana de cada generación, y es más compatible con la idea de que la
+        evaluación del presente pesa más.
+      </p>
+      <figure>
+        <img src="../img/satisfaccion-democracia/g3-coeficientes-periodo.png" alt="Gráfico de puntos con las razones de odds de cada variable en los períodos 2006-2014, 2017-2019 y 2023-2026" loading="lazy">
+        <figcaption>Razones de odds de estar satisfecho por período, con intervalos de confianza de 95% y escala logarítmica. Elaboración propia con datos de LAPOP. These data were supplied by LAPOP Lab at Vanderbilt University, which takes no responsibility for any interpretation of the data.</figcaption>
+      </figure>
+
+      <h3>4. El territorio funciona al revés de lo esperado</h3>
+      <p>
+        Se esperaba menor satisfacción donde el acceso a los servicios del Estado es más débil. Sin
+        embargo, hasta 2014 la población rural estaba más satisfecha que la urbana y los residentes de
+        la Región Metropolitana, menos que los del resto del país. Desde 2017 esas diferencias se
+        reducen. La medición territorial capta solo una parte del concepto, por lo que el resultado no
+        respalda la hipótesis, pero tampoco permite descartarla.
+      </p>
+      <figure>
+        <img src="../img/satisfaccion-democracia/g2-mapa-calor.png" alt="Mapa de calor con la diferencia de cada grupo respecto del promedio nacional de satisfacción en cada ola" loading="lazy">
+        <figcaption>Diferencia de cada grupo con el promedio nacional de su ola, en puntos porcentuales. Elaboración propia con datos de LAPOP. These data were supplied by LAPOP Lab at Vanderbilt University, which takes no responsibility for any interpretation of the data.</figcaption>
+      </figure>
+
+      <h2>Qué cambió</h2>
+      <p>
+        El resultado central no es un aumento general de la desigualdad en la satisfacción, sino un
+        cambio en quiénes están satisfechos. Hasta mediados de la década pasada lo estaban más las
+        personas mayores, de zonas rurales y de fuera de Santiago. En 2023–2026, lo están más las
+        personas con más educación e ingreso, los jóvenes y los hombres.
+      </p>
+
+      <h2>Alcance</h2>
+      <p>
+        El voto se mide con el voto recordado, que sobrerrepresenta a los ganadores, y no se preguntó
+        en 2026, por lo que no se puede descartar que parte del cambio reciente responda a la
+        composición del nuevo electorado ganador. Las muestras rurales son pequeñas y los resultados son
+        asociaciones, no efectos causales. Estos resultados son preliminares y pueden cambiar en la
+        entrega final.
+      </p>
+      <p class="note">These data were supplied by LAPOP Lab at Vanderbilt University, which takes no responsibility for any interpretation of the data.</p>
 
       <a class="back" href="../blog.html">← Volver al blog</a>
     </article>

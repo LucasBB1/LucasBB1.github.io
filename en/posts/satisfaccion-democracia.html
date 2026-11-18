@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What explains satisfaction with democracy in Chile? — Lucas Bottinelli Baltra</title>
-  <meta name="description" content="Draft project on satisfaction with democracy in Chile.">
+  <title>Winners and losers: the roots of democratic dissatisfaction in Chile, 2006–2026 — Lucas Bottinelli Baltra</title>
+  <meta name="description" content="Who is more and less satisfied with democracy in Chile and how that changed between 2006 and 2026, using nine LAPOP waves. Group coursework for ICP5006.">
   <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
   <link rel="alternate" hreflang="es" href="https://lucasbb1.github.io/posts/satisfaccion-democracia.html">
   <link rel="alternate" hreflang="en" href="https://lucasbb1.github.io/en/posts/satisfaccion-democracia.html">
@@ -33,9 +33,113 @@
 
   <main class="wrap">
     <article class="post">
-      <h1>What explains satisfaction with democracy in Chile?</h1>
-      <p class="post-meta">Draft · Course on Measurement and Dimensional Analysis of Political Data (ICP5006)</p>
-      <p>This entry will contain the project report on the structural determinants of satisfaction with democracy in Chile. The final content (theoretical framework, operationalisation of concepts, data analysis and results) will be published here as part of the second course assignment.</p>
+      <h1>Winners and losers: the roots of democratic dissatisfaction in Chile, 2006–2026</h1>
+      <p class="post-meta">Lucas Bottinelli Baltra, Matías Llorens Rubio and Benjamín Zúñiga Silva · Master's in Political Science, Pontificia Universidad Católica de Chile<br>Group coursework for Measurement and Dimensional Analysis of Political Data (ICP5006), Professor Soledad Araya · Assignment 2, preliminary results · November 2026</p>
+
+      <div class="doc-links">
+        <a href="https://github.com/LucasBB1/Ganadores-y-Perdedores">Code and results (GitHub)</a>
+      </div>
+
+      <p>
+        Between 2006 and 2026, the share of Chileans satisfied with how democracy works did not fall in
+        a straight line. It ranged between 49% and 63% until 2014, dropped to 32% in 2017, before the
+        2019 social unrest, and rose to 55% in 2026. This project asks which groups are more and less
+        satisfied and whether those gaps changed over time. It tests four conditions proposed in the
+        literature: having voted for the winner or a loser of the presidential election, socioeconomic
+        position, age, and access to citizenship rights across the territory.
+      </p>
+      <p>
+        This entry summarises the results of the second course assignment. The full report will be
+        published here after the final submission.
+      </p>
+
+      <h2>Data and methods</h2>
+      <p>
+        The analysis uses the ten AmericasBarometer (LAPOP) waves for Chile between 2006 and 2026. The
+        dependent variable is item PN4, which asks about satisfaction with the way democracy works in
+        Chile, recoded as satisfied or very satisfied versus the rest. The models are logistic
+        regressions with wave fixed effects and each survey's sampling design, estimated on the nine
+        face-to-face waves. The 2021 telephone wave is only used in the national series. The whole
+        analysis is reproducible in R from the repository.
+      </p>
+      <figure>
+        <img src="../img/satisfaccion-democracia/g1-tendencia-nacional.png" alt="Line chart with the percentage satisfied with democracy in Chile in each LAPOP wave between 2006 and 2026, with bands for each government" loading="lazy">
+        <figcaption>Percentage satisfied or very satisfied with democracy in Chile, 2006–2026. Own elaboration with LAPOP data. These data were supplied by LAPOP Lab at Vanderbilt University, which takes no responsibility for any interpretation of the data.</figcaption>
+      </figure>
+
+      <h2>Four results</h2>
+
+      <h3>1. Having voted for the winner is the strongest condition</h3>
+      <p>
+        Those who voted for the sitting president have odds of being satisfied 1.9 times higher than
+        those who voted for another candidate. In probabilities, the difference is 15.7 percentage
+        points, almost twice that of any other condition. The gap is positive in every wave with vote
+        data and does not grow over time.
+      </p>
+      <div class="table-scroll">
+          <table>
+            <thead><tr><th>Comparison</th><th>Group</th><th>Reference</th><th>Difference (points)</th></tr></thead>
+          <tbody>
+            <tr><td>Winner vs. loser (2006–2023)</td><td>58.9</td><td>43.2</td><td>15.7</td></tr>
+            <tr><td>Rural vs. urban</td><td>57.3</td><td>48.7</td><td>8.6</td></tr>
+            <tr><td>60 or older vs. 18–29</td><td>54.5</td><td>48.3</td><td>6.2</td></tr>
+            <tr><td>High vs. low income</td><td>52.5</td><td>47.1</td><td>5.4</td></tr>
+            <tr><td>Metropolitan Region vs. other regions</td><td>46.7</td><td>51.9</td><td>−5.2</td></tr>
+            <tr><td>Tertiary vs. primary or less</td><td>50.3</td><td>50.5</td><td>−0.2</td></tr>
+            <tr><td>Woman vs. man</td><td>49.5</td><td>50.1</td><td>−0.6</td></tr>
+          </tbody>
+          </table>
+        </div>
+      <p class="note">Predicted probability of being satisfied or very satisfied (%), holding respondents' other observed characteristics. For the vote, 2006–2023 waves, since the 2026 wave did not ask about the vote.</p>
+
+      <h3>2. Socioeconomic position starts to matter after 2019</h3>
+      <p>
+        Until 2019, education did not differentiate satisfaction and income did so only slightly. In
+        2023–2026, people with secondary or tertiary education and those with higher income become
+        clearly more satisfied. A Wald test confirms that both effects change across periods.
+      </p>
+
+      <h3>3. The advantage of older people reverses</h3>
+      <p>
+        Until 2019, people aged 60 or older were the most satisfied. In 2023–2026, the youngest are the
+        most satisfied. Such a rapid change is hard to explain by each generation's early socialisation
+        and fits better with the idea that evaluations of the present weigh more.
+      </p>
+      <figure>
+        <img src="../img/satisfaccion-democracia/g3-coeficientes-periodo.png" alt="Dot chart with the odds ratios of each variable in the periods 2006-2014, 2017-2019 and 2023-2026" loading="lazy">
+        <figcaption>Odds ratios of being satisfied by period, with 95% confidence intervals on a logarithmic scale. Own elaboration with LAPOP data. These data were supplied by LAPOP Lab at Vanderbilt University, which takes no responsibility for any interpretation of the data.</figcaption>
+      </figure>
+
+      <h3>4. Territory works the opposite way to what was expected</h3>
+      <p>
+        Lower satisfaction was expected where access to state services is weaker. However, until 2014
+        the rural population was more satisfied than the urban one, and residents of the Metropolitan
+        Region less satisfied than those in the rest of the country. Since 2017 those gaps have
+        narrowed. The territorial measures capture only part of the concept, so the result does not
+        support the hypothesis, but it does not rule it out either.
+      </p>
+      <figure>
+        <img src="../img/satisfaccion-democracia/g2-mapa-calor.png" alt="Heat map with the difference of each group from the national average satisfaction in each wave" loading="lazy">
+        <figcaption>Difference of each group from the national average of its wave, in percentage points. Own elaboration with LAPOP data. These data were supplied by LAPOP Lab at Vanderbilt University, which takes no responsibility for any interpretation of the data.</figcaption>
+      </figure>
+
+      <h2>What changed</h2>
+      <p>
+        The central result is not a general rise in inequality in satisfaction but a change in who is
+        satisfied. Until the middle of the last decade, older people, rural residents and those outside
+        Santiago were more satisfied. In 2023–2026, people with more education and income, the young
+        and men are.
+      </p>
+
+      <h2>Scope</h2>
+      <p>
+        The vote is measured with recalled vote, which over-represents winners, and it was not asked in
+        2026, so part of the recent change may reflect the composition of the new winning electorate.
+        Rural samples are small, and the results are associations, not causal effects. These results are
+        preliminary and may change in the final submission.
+      </p>
+      <p class="note">These data were supplied by LAPOP Lab at Vanderbilt University, which takes no responsibility for any interpretation of the data.</p>
+
       <a class="back" href="../blog.html">← Back to the blog</a>
     </article>
   </main>
