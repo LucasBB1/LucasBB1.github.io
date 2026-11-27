@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Same votes, a different Chamber — Lucas Bottinelli Baltra</title>
+  <meta name="description" content="Working Paper No. 7. Effects of the reallocation of Chamber seats after the 2024 Census on representation, blocs and voting thresholds, holding 2025 votes constant.">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+  <link rel="alternate" hreflang="es" href="https://lucasbb1.github.io/posts/redistribucion-escanos-2029.html">
+  <link rel="alternate" hreflang="en" href="https://lucasbb1.github.io/en/posts/redistribucion-escanos-2029.html">
+  <link rel="alternate" hreflang="x-default" href="https://lucasbb1.github.io/posts/redistribucion-escanos-2029.html">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%231f4e5f%22/%3E%3Ctext x=%2216%22 y=%2221%22 font-family=%22Georgia,serif%22 font-size=%2214%22 font-weight=%22700%22 fill=%22%23ffffff%22 text-anchor=%22middle%22%3ELB%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <header class="site">
+    <nav>
+      <a class="brand" href="../index.html">Lucas Bottinelli Baltra</a>
+      <span class="nav-tools"><a class="lang-toggle" href="../../posts/redistribucion-escanos-2029.html" hreflang="es" lang="es" data-lang="es" title="Leer en español" aria-label="Leer en español">ES</a><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">◐</button></span>
+      <div class="nav-links">
+        <a class="navlink" href="../index.html">Home</a>
+        <a class="navlink" href="../experiencia.html">Experience</a>
+        <a class="navlink" href="../investigacion.html">Research</a>
+        <a class="navlink" href="../consultoria.html">Consulting</a>
+        <a class="navlink active" href="../blog.html">Blog</a>
+        <a class="navlink" href="../cv.html">CV</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <article class="post">
+      <h1>Same votes, a different Chamber: the reallocation of seats after the 2024 Census and its effects on representation and voting thresholds</h1>
+      <p class="post-meta">Lucas Bottinelli Baltra (<a href="https://orcid.org/0009-0000-4865-7261">ORCID 0009-0000-4865-7261</a>) · MA candidate in Political Science, Pontificia Universidad Católica de Chile<br>Working Paper No. 7 · November 2026 · Not peer reviewed · Full paper in Spanish</p>
+      <div class="doc-links">
+        <a href="../../documentos/Bottinelli-Baltra_2026_Redistribucion-escanos-2029.pdf">Full paper (PDF, Spanish)</a>
+        <a href="https://github.com/LucasBB1/Redistribucion-Escanos-2029">Data and code</a>
+        <a href="https://doi.org/10.5281/zenodo.24575197">DOI: 10.5281/zenodo.24575197</a>
+      </div>
+      <p>In April 2026, Chile's Electoral Service (SERVEL) updated, for the first time, the allocation of the 155 seats of the Chamber of Deputies across its 28 districts, using 2024 Census population. Resolution O-129 moves ten seats, seven of them to the Santiago Metropolitan Region, and applies from the 2029 legislative election.</p>
+      <p>This working paper asks what changes with that reallocation if votes are held constant. It separates the mechanical effect of the new rule, the only one attributable to the resolution, from the changes in candidacies, alliances and preferences the next election will bring. This entry summarises the findings; the full paper develops the theoretical framework, the method and the limitations.</p>
+      <h2>Data and methods</h2>
+      <p>The analysis uses official candidate-level results of the 2025 Chamber election, census population by municipality in 2017 and 2024, the 2024 regional and municipal council results, and the 1,566 roll-call votes held in the Chamber between March and November 2026. A D'Hondt algorithm with the legal candidate caps reproduces all 155 winners of 2025 and the allocation of Resolution O-129 in the 28 districts. It is used to rerun the election with the 2029 magnitudes, to measure malapportionment, disproportionality, the effective number of parties and the effective threshold, and to simulate uniform vote swings between blocs against the Chamber's voting thresholds. Each bloc's power is measured with the Banzhaf index, and the behaviour of the Party of the People (PDG) with its voting agreement with each bloc. All processing is reproducible in R.</p>
+      <h2>Five findings</h2>
+      <h3>1. Vote inequality falls but does not disappear</h3>
+      <p>Malapportionment falls from 10.6% to 7.5% of seats. Without the legal floor of three and ceiling of eight seats per district, the same population would allow 3.2%. The Aysén and Magallanes districts keep more than twice the representation their population warrants, while district 8, in the Metropolitan Region, still has about six tenths of its share.</p>
+      <figure>
+        <img src="../../img/redistribucion-escanos/g1-representacion.png" alt="Bar chart of the representation index of each of the 28 districts under the current and the 2029 magnitudes" loading="lazy">
+        <figcaption>Representation index by district, share of seats divided by share of the 2024 census population. The horizontal line marks proportional representation. Author's calculations with INE and SERVEL data.</figcaption>
+      </figure>
+      <h3>2. A Chamber of extremes</h3>
+      <p>Three-seat districts rise from 4 to 10 and eight-seat districts from 5 to 10. From 2029, 80 of the 155 deputies will be elected in eight-seat districts. Aggregate proportionality barely changes, but the effective threshold diverges more between small and large districts.</p>
+      <figure>
+        <img src="../../img/redistribucion-escanos/g2-magnitudes.png" alt="Dot chart of each district's magnitude between 2017 and 2025 and from 2029" loading="lazy">
+        <figcaption>District magnitude between 2017 and 2025 (grey) and from 2029 (colour). Author's calculations based on SERVEL Resolution O-129.</figcaption>
+      </figure>
+      <h3>3. Ten deputies out, ten in</h3>
+      <p>With the same 2025 votes, ten elected deputies would lose their seats and ten candidates would win one. The net change by bloc is small, but it moves the right from 76 to 78 seats, exactly an absolute majority. The PDG, which declares itself neither pro-government nor opposition, is no longer decisive in those votes, and its Banzhaf power index falls from one third to zero. The 2026 roll-call votes confirm its current pivotal role, since it sides equally with both blocs and its votes decided 131 contested votes.</p>
+      <h3>4. A bigger bonus for the winning bloc</h3>
+      <p>The seats-votes curve becomes steeper. Each additional point of vote share yields more seats for the winning bloc, and responsiveness rises from 1.37 to 1.53.</p>
+      <figure>
+        <img src="../../img/redistribucion-escanos/g3-curva-escanos-votos.png" alt="Step chart of the right bloc's seats by vote share, under the current and the 2029 magnitudes, with and without a legal threshold, and the Chamber's voting thresholds" loading="lazy">
+        <figcaption>Seats of the right bloc by vote share, with a uniform proportional swing between right and left. The vertical line marks the 2025 vote and the horizontal lines the Chamber's voting thresholds. Author's calculations with SERVEL data. Labels in Spanish.</figcaption>
+      </figure>
+      <h3>5. The 5% threshold amplifies the effect</h3>
+      <p>With the new magnitudes and the threshold of 5% or eight legislators proposed in bill 17,253-07, the right would reach 79 seats and would need 47.9% of the vote to secure the four-sevenths majority for constitutional amendments, compared with 52.4% under current rules. The membership thresholds of the party-system reform, by contrast, mainly affect the centre and left bloc.</p>
+      <figure>
+        <img src="../../img/redistribucion-escanos/g4-umbral-partidos.png" alt="Bar chart of each party's seats without a threshold and under both versions of the legal threshold, with 2025 votes and 2029 magnitudes" loading="lazy">
+        <figcaption>Seats by party under each legal threshold, with 2025 votes and 2029 magnitudes. Votes of parties below the threshold are reassigned to eligible parties in their alliance. Author's calculations with SERVEL data. Labels in Spanish.</figcaption>
+      </figure>
+      <h2>Regional and municipal councils</h2>
+      <p>The 2024 Census also changes the regional councils. The total number of councillors rises from 302 to 306, as Coquimbo goes from 16 to 20, and the allocation changes in Llanquihue, Osorno, Punilla and Itata. In municipal councils, which depend on the number of registered voters, only Alto Hospicio and Chiguayante would move to a different bracket with the 2025 register.</p>
+      <h2>Scope</h2>
+      <p>The simulation holds 2025 votes constant, so it measures the mechanical effect of the reallocation and not the changes in candidacies, alliances and preferences that 2029 will bring. Blocs are defined by electoral alliances, and each party's ideological classification is justified with the literature in the paper. Some deputies switched parties after the election, which is reported but barely affects the aggregate measures. Data and code are public, so the analysis can be updated with new roll-call votes or with the reforms Congress approves.</p>
+      <h2>How to cite</h2>
+      <p class="cite">Bottinelli Baltra, L. (2026). <em>Los mismos votos, otra Cámara: la redistribución de escaños tras el Censo 2024 y sus efectos sobre la representación y los quórums</em> (Documento de trabajo N.° 7). <a href="https://doi.org/10.5281/zenodo.24575197">https://doi.org/10.5281/zenodo.24575197</a></p>
+      <p>The R code and processed data are archived in Zenodo: <a href="https://doi.org/10.5281/zenodo.24575171">https://doi.org/10.5281/zenodo.24575171</a>.</p>
+      <a class="back" href="../blog.html">← Back to the blog</a>
+    </article>
+  </main>
+
+  <footer class="site">
+    Lucas Bottinelli Baltra · Santiago, Chile
+  </footer>
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var saved = null; try { saved = localStorage.getItem('theme'); } catch (e) {}
+      if (saved) root.setAttribute('data-theme', saved);
+      function current() {
+        if (root.getAttribute('data-theme')) return root.getAttribute('data-theme');
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.getElementById('themeToggle');
+        if (!btn) return;
+        btn.addEventListener('click', function () {
+          var next = current() === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', next);
+          try { localStorage.setItem('theme', next); } catch (e) {}
+        });
+      });
+    })();
+  </script>
+  <script>
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a.lang-toggle');
+      if (a) { try { localStorage.setItem('lang', a.getAttribute('data-lang')); } catch (err) {} }
+    });
+  </script>
+</body>
+</html>
